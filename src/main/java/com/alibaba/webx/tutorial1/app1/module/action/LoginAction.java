@@ -18,7 +18,7 @@ public class LoginAction {
         String name = visitor.getName();
         String passwd = visitor.getPasswd(); //怎么调试呢，怎么看这里的passwd有没有值
    
-        if("admin".equals(name) && !passwd.isEmpty()){
+        if("admin".equals(name) && "admin".equals(passwd)){ //这里passwd的判定有问题
             nav.redirectTo("app1Link").withTarget("form/welcome").withParameter("name",name); //为什么不能实现跳转
        }else{
              
